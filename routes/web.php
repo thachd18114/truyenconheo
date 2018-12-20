@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('backend.layouts.index');
 });
+Route::get('/admin/danhsachloai', 'TheLoaiController@index')->name('danhsachloai.index');

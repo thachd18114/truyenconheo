@@ -22,6 +22,8 @@ class CreateNhanvienTable extends Migration
             $table->string('nv_diaChi', 250 );
             $table->date('nv_ngaySinh');
             $table->string('tk_tenDangNhap', 20);
+            $table->timestamp('nv_taoMoi')->default(DB::raw('current_timestamp'));
+            $table->timestamp('nv_capNhat')->default(DB::raw('current_timestamp'));
 
             $table->foreign('tk_tenDangNhap')->references('tk_tenDangNhap')->on('taikhoan')->onDelete('CASCADE')->onUpdate('CASCADE');
 

@@ -1,0 +1,14 @@
+#table1 th, td, tr {
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    border: 1px solid black;
+    text-align: center;
+}
+#table1 tr:hover {
+    background-color: #abd3ff;
+}
+h1 {
+    text-align: center;
+}
+hr {
+    border: 1px solid #4a4a4a;
+}

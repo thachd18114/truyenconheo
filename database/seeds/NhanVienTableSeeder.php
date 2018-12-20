@@ -12,9 +12,9 @@ class NhanVienTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create('Vi_VN');
         $list = [];
-        $sdt = ['1111111111','2222222222','3333333333','4444444444','5555555555'];
-        $tk = ['avo', 'ha76', 'khuong.qunh','nghiem23','tiep96'];
-        for ($i = 1; $i <= 5; $i++) {
+        $sdt = ['1111111111','2222222222','3333333333','4444444444'];
+        $tk = ['ale', 'jcam', 'khuc.tr','nhan74'];
+        for ($i = 1; $i <= 4; $i++) {
             array_push($list,
                 [
                     'nv_ten' => $faker->name($gender = null),

@@ -11,6 +11,7 @@ class TheLoaiTableSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker\Factory::create('vi_VN');
         $list = [];
         $types = ["Hành động", "Tình cảm", "Trinh thám", "Thiếu nhi", "Tiên hiệp",
             "Anime", "Chuyển sinh", "Manga", "Thể thao"];
@@ -19,6 +20,7 @@ class TheLoaiTableSeeder extends Seeder
             array_push($list, [
                 'tl_ma'      => $i,
                 'tl_ten'     => $types[$i-1],
+                'tl_moTa'   => $faker->text(21),
                 'tl_trangThai' => '2'
             ]);
         }

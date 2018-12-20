@@ -19,6 +19,7 @@ class CreateHinhanhTable extends Migration
             $table->string('ha_ten', 100);
             $table->unsignedInteger('c_ma');
 
+
             $table->primary(['c_ma', 'ha_stt']);
 
             $table->foreign('c_ma')->references('c_ma')->on('chuong')->onDelete('CASCADE')->onUpdate('CASCADE');
