@@ -15,8 +15,8 @@
         </div>
     @endif
 
-    <form method="post" action="{{ route('danhsachloai.update', ['id' => $loai->tl_ma]) }}">
-        <input type="hidden" name="_method" value="POST" />
+    <form method="post" action="{{ route('theloai.update', ['id' => $loai->tl_ma]) }}">
+        <input type="hidden" name="_method" value="PUT" />
         {{ csrf_field() }}
         <div class="form-group">
             <label for="tl_ten">Tên</label>

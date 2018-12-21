@@ -5,7 +5,8 @@
 @endsection
 
 @section('content')
-    <form  method="post" action="{{route('danhsachloai.store')}}">
+    <form  method="post" action="{{route('theloai.store')}}">
+        <input type="hidden" name="_method" value="POST" />
         {{ csrf_field() }}
         <div class="form-group">
             <label for="tl_ten">Nhập tên loại</label>

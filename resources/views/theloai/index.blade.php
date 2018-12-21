@@ -7,7 +7,7 @@
 @section('content')
     <h1>THỂ LOẠI TRUYỆN</h1>
     <hr>
-    <p><a href="{{route('danhsachloai.create')}}"><i class="fas fa-plus-circle"></i> Thêm mới</a></p>
+    <p><a href="{{route('theloai.create')}}"><i class="fas fa-plus-circle"></i> Thêm mới</a></p>
 
     <div class="flash-message">
         @foreach (['danger', 'warning', 'success', 'info'] as $msg)
@@ -39,9 +39,9 @@
                 <td>{{ $loai->tl_capNhat }}</td>
                 <td>{{ $loai->tl_trangThai }}</td>
                 <td>{{ $loai->tl_moTa }}</td>
-                <td><a href="{{ route('danhsachloai.edit', ['id' => $loai->tl_ma]) }}"><button class="btn btn-success"><i class="far fa-edit"></i></button></a></td>
+                <td><a href="{{ route('theloai.edit', ['id' => $loai->tl_ma]) }}"><button class="btn btn-success"><i class="far fa-edit"></i></button></a></td>
                 <td>
-                    <form method="post" action="{{ route('danhsachloai.destroy', ['id' => $loai->tl_ma]) }}" >
+                    <form method="post" action="{{ route('theloai.destroy', ['id' => $loai->tl_ma]) }}" >
                         <input type="hidden" name="_method" value="DELETE" />
                         {{ csrf_field() }}
                         <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>

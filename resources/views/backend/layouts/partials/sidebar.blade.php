@@ -23,8 +23,8 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">DANH MỤC</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="{{ Request::is('admin/danhsachloai') ? 'active' : '' }}"><a href="{{ route('danhsachloai.index') }}"><i class="fa fa-link"></i> <span>THỂ LOẠI TRUYỆN</span></a></li>
-            <li><a href="/admin/danhsachloai"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+            <li class="{{ Request::is('admin/theloai') ? 'active' : '' }}"><a href="{{ route('theloai.index') }}"><i class="fa fa-link"></i> <span>THỂ LOẠI TRUYỆN</span></a></li>
+            <li><a href="/admin/theloai"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
             <li class="treeview">
                 <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
                     <span class="pull-right-container">
