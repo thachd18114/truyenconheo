@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-    <h1>THỂ LOẠI TRUYỆN</h1>
+    <h1>DANH SÁCH TÁC GIẢ</h1>
     <hr>
-    <p><a href="{{route('danhsachloai.create')}}"><i class="fas fa-plus-circle"></i> Thêm mới</a></p>
+    <p><a href="#"><i class="fas fa-plus-circle"></i> Thêm mới</a></p>
 
     <div class="flash-message">
         @foreach (['danger', 'warning', 'success', 'info'] as $msg)
@@ -22,26 +22,30 @@
         <tr>
             <th>Mã</th>
             <th>Tên</th>
+            <th>Email</th>
+            <th>Ngày Sinh</th>
+
             <th>Tạo Mới</th>
             <th>Cập Nhật</th>
             <th>Trạng Thái</th>
-            <th>Mô Tả</th>
             <th>Sửa</th>
             <th>Xóa</th>
         </tr>
         </thead>
         <tbody>
-        @foreach($danhsachloai as $loai)
+        @foreach($danhsachdocgia as $docgia)
             <tr>
-                <td>{{ $loai->tl_ma }}</td>
-                <td>{{ $loai->tl_ten }}</td>
-                <td>{{ $loai->tl_taoMoi }}</td>
-                <td>{{ $loai->tl_capNhat }}</td>
-                <td>{{ $loai->tl_trangThai }}</td>
-                <td>{{ $loai->tl_moTa }}</td>
-                <td><a href="{{ route('danhsachloai.edit', ['id' => $loai->tl_ma]) }}"><button class="btn btn-success"><i class="far fa-edit"></i></button></a></td>
+                <td>{{ $docgia->dg_ma }}</td>
+                <td>{{ $docgia->dg_ten }}</td>
+                <td>{{ $docgia->dg_email }}</td>
+                <td>{{ $docgia->dg_ngaySinh }}</td>
+
+                <td>{{ $docgia->dg_taoMoi }}</td>
+                <td>{{ $docgia->dg_capNhat }}</td>
+                <td>{{ $docgia->dg_trangThai }}</td>
+                <td><a href="#"><button class="btn btn-success"><i class="far fa-edit"></i></button></a></td>
                 <td>
-                    <form method="post" action="{{ route('danhsachloai.destroy', ['id' => $loai->tl_ma]) }}" >
+                    <form method="post" >
                         <input type="hidden" name="_method" value="DELETE" />
                         {{ csrf_field() }}
                         <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>

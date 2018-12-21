@@ -17,8 +17,8 @@ class CreateTheloaiTable extends Migration
             $table->engine = 'InnoDB';
             $table->unsignedInteger('tl_ma')->autoIncrement() ;
             $table->string('tl_ten', 50);
-            $table->timestamp('l_taoMoi')->default(DB::raw('current_timestamp'));
-            $table->timestamp('l_capNhat')->default(DB::raw('current_timestamp'));
+            $table->timestamp('tl_taoMoi')->default(DB::raw('current_timestamp'));
+            $table->timestamp('tl_capNhat')->default(DB::raw('current_timestamp'));
             $table->unsignedInteger('tl_trangThai');
             $table->text('tl_moTa');
 
