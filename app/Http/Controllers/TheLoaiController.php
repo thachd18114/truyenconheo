@@ -3,20 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\TheLoai;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
-use App\Http\Requests\TheLoaiRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Requests;
 
 use DB;
 
 class TheLoaiController extends Controller
 {
-    public function index()
+  /* public function index()
     {
         $ds_loai = DB::table('theloai')->get();
 
         return view('theloai.index')
             ->with('danhsachloai', $ds_loai);
+    }*/
+
+    public function index () {
+        $ds_loai = DB::table('theloai')->get();
+        $json = json_encode($ds_loai);
+        return response(['message' =>compact('ds_loai','json')], 200);
     }
+
+/*
 
     public function create()
     {
@@ -71,5 +81,5 @@ class TheLoaiController extends Controller
         $loai->delete();
         Session::flash('alert-danger', 'Xoa du lieu thanh cong ^^~!!!');
         return redirect()->route('danhsachloai.index');
-    }
+    }*/
 }

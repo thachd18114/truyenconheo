@@ -1,4 +1,4 @@
-<header class="main-header">
+<header class="main-header" ng-app="truyen-app">
 
     <!-- Logo -->
     <a href="index2.html" class="logo">

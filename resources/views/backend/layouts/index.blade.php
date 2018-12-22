@@ -3,7 +3,7 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html>
+<html lang="en" ng-app="truyen-app">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,26 +40,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{ asset('css/custom-styles.css') }}">
     @yield('custom-css')
 </head>
-<!--
-BODY TAG OPTIONS:
-=================
-Apply one or more of the following classes to get the
-desired effect
-|---------------------------------------------------------|
-| SKINS         | skin-blue                               |
-|               | skin-black                              |
-|               | skin-purple                             |
-|               | skin-yellow                             |
-|               | skin-red                                |
-|               | skin-green                              |
-|---------------------------------------------------------|
-|LAYOUT OPTIONS | fixed                                   |
-|               | layout-boxed                            |
-|               | layout-top-nav                          |
-|               | sidebar-collapse                        |
-|               | sidebar-mini                            |
-|---------------------------------------------------------|
--->
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -72,11 +53,13 @@ desired effect
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            @yield('content')
+            
         </section>
 
         <!-- Main content -->
         <section class="content container-fluid">
+            @yield('content')
+
 
             <!--------------------------
               | Your Page Content Here |
@@ -104,14 +87,22 @@ desired effect
 <!-- jQuery 3 -->
 <script src="{{ asset('theme/adminlte/bower_components/jquery/dist/jquery.min.js') }}"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="{{ asset('theme/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+<!--Angularjs-------------->
+<script src="{{ asset('vendor/angularjs/angular.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('theme/adminlte/js/adminlte.min.js') }}"></script>
 <script src="{{ asset('theme/adminlte/js/jquery-3.3.1.min.js') }}"></script>
+<!--
 <script src="{{ asset('theme/adminlte/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ asset('theme/adminlte/js/dataTables.bootstrap.min.js') }}"></script>
+<script src="{{ asset('theme/adminlte/js/dataTables.bootstrap.min.js') }}"></script>-->
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="{{ asset('theme/adminlte/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{asset('app/app.js')}}"></script>
+<script type="text/javascript" language="JavaScript" src="{{asset('app/controller/LoaiController.js')}}"></script>
+
 <script language="javascript">
-    $(document).ready(function() {
+  /*  $(document).ready(function() {
         var table = $('#table1').DataTable( {
             responsive: true,
             "language": {
@@ -134,7 +125,7 @@ desired effect
             "lengthMenu": [[ 5, 10, 15, 20, 25, 30, -1], [5, 10, 15, 20, 25, 30, "Tất cả"]]
         } );
         new $.fn.dataTable.FixedHeader( table );
-    } );
+    } );*/
 </script>
 
 </body>

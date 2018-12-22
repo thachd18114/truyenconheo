@@ -16,4 +16,8 @@ Route::get('/', function () {
 });
 Route::get('/admin/danhsachtacgia', 'TacGiaController@index')->name('danhsachtacgia.index');
 Route::get('/admin/danhsachdocgia', 'DocGiaController@index')->name('danhsachdocgia.index');
-Route::resource('/admin/theloai','TheLoaiController');
+//Route::resource('/admin/theloai','TheLoaiController');
+
+
+Route::get('admin', 'TheLoaiController@index');
+Route::get('admin/theloai', function (){return view('theloai.index');})->name('danhsachtheloai.index');
